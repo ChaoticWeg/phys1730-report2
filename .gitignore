@@ -1,3 +1,6 @@
+## decided that fuck you i'm keeping the pdf for myself
+*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
