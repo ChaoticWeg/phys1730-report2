@@ -4,7 +4,12 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "pdflatex -halt-on-error report2.tex",
+            "windows": {
+                "command": "pdflatex -halt-on-error report2.tex"
+            },
+            "linux": {
+                "command": "pdflatex -halt-on-error report2.tex && evince report2.pdf"
+            },
             "group":{
                 "kind": "build",
                 "isDefault": true
