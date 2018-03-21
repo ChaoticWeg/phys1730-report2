@@ -6,6 +6,24 @@
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx}
 \usepackage{geometry}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{multirow}
+
+% variables
+
+\newcommand{\myTitle}{Conservation of Momentum}
+\newcommand{\myName}{Shawn Lutch}
+\newcommand{\myPeriod}{PHYS 1730.506}
+
+% metadata
+
+\usepackage[pdftex,
+            pdfauthor={\myName{}},
+            pdftitle={\myTitle{}},
+            pdfsubject={\myPeriod{}},
+            pdfproducer={LaTeX},
+            pdfcreator={latexpdf}]{hyperref}
 
 % layout
 
@@ -21,19 +39,13 @@
 
 \begin{document}
 
-\includepdf{pages/titlepage}
+% TITLE PAGE
+
+\input{sections/title}
 
 % ABSTRACT
 
-\section*{Abstract}
-
-\noindent
-The purpose of this lab is to study conservation of momentum and the 
-differences between elastic and inelastic collisions. This lab focuses on
-collisions in a one-dimensional system with two objects. By sliding two
-gliders with known masses toward each other on an air track and calculating
-the total momentum of the system ($p$) and after ($p'$) the collision, we see
-that, because $p = p'$, momentum is conserved.
+\input{sections/abstract}
 
 % INTRODUCTION
 
@@ -69,13 +81,47 @@ colliding harshly into the ends of the track after colliding with one another.
 
 \section*{Data}
 
-\begin{tabular}{c || c | c }
+\subsection*{Glider Masses}
 
-\end{tabular}
+\input{tables/masses}
 
 % CALCS AND GRAPHS
 
 \section*{Calculations and Graphs}
+\captionsetup[subfigure]{labelformat=empty}
+
+\subsection*{Inelastic Collisions}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \caption{Momentum -- Inelastic}
+        \input{tables/momentum_inelastic}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \caption{Kinetic Energy -- Inelastic}
+        \input{tables/ke_inelastic}
+    \end{subfigure}
+\end{figure}
+
+\subsection*{Elastic Collisions}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \caption{Momentum -- Elastic}
+        \input{tables/momentum_elastic}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \caption{Kinetic Energy -- Elastic}
+        \input{tables/ke_elastic}
+    \end{subfigure}
+\end{figure}
+    
 
 % DISCUSSION
 
