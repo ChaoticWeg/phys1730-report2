@@ -21,11 +21,12 @@
             pdfauthor={\myName{}},
             pdftitle={\myTitle{}},
             pdfsubject={\myPeriod{}},
-            pdfproducer={LaTeX},
+            pdfproducer={\myName{} via LaTeX},
             pdfcreator={pdflatex}]{hyperref}
 
 % layout
 
+\raggedright
 \geometry{
     letterpaper,
     lmargin=0.75in,
@@ -41,7 +42,10 @@
 \begin{document}
 
 % TITLE PAGE
-\input{sections/title}
+\title{\myTitle{}}
+\author{\myName{}\\ \myPeriod{}}
+\date{\today}
+\maketitle
 
 % ABSTRACT
 \input{sections/abstract}
