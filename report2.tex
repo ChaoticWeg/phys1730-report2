@@ -22,7 +22,7 @@
             pdftitle={\myTitle{}},
             pdfsubject={\myPeriod{}},
             pdfproducer={LaTeX},
-            pdfcreator={latexpdf}]{hyperref}
+            pdfcreator={pdflatex}]{hyperref}
 
 % layout
 
@@ -34,102 +34,41 @@
     bmargin=1.0in
 }
 
+%%
 % the real fun begins
+%%
 
 \begin{document}
 
 % TITLE PAGE
-
 \input{sections/title}
 
 % ABSTRACT
-
 \input{sections/abstract}
 
 % INTRODUCTION
-
-\section*{Introduction}
-
-\noindent
-
+\input{sections/introduction}
 
 % APPARATUS
-
-\section*{Apparatus}
-
-\begin{itemize}
-    \item Air track
-    \item Two gliders
-    \item Two photo gates
-    \item Computer with timing and analysis software
-\end{itemize}
+\input{sections/apparatus}
 
 % PROCEDURE
-
-\section*{Procedure}
-
-\noindent
-The air track and compressor were set up by the lab instructors prior to
-our experiment. We ensured that the track was level by adjusting the base
-support screws until a glider in the middle of the track remained stationary.
-We then placed a photogate 30 cm from each end of the track and placed a 
-rubber band bumper on each end of the track, to prevent the gliders from
-colliding harshly into the ends of the track after colliding with one another.
+\input{sections/procedure}
 
 % DATA
-
-\section*{Data}
-
-\subsection*{Glider Masses}
-
-\input{tables/masses}
+\input{sections/data}
 
 % CALCS AND GRAPHS
-
-\section*{Calculations and Graphs}
-\captionsetup[subfigure]{labelformat=empty}
-
-\subsection*{Inelastic Collisions}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \caption{Momentum -- Inelastic}
-        \input{tables/momentum_inelastic}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \caption{Kinetic Energy -- Inelastic}
-        \input{tables/ke_inelastic}
-    \end{subfigure}
-\end{figure}
-
-\subsection*{Elastic Collisions}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \caption{Momentum -- Elastic}
-        \input{tables/momentum_elastic}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \caption{Kinetic Energy -- Elastic}
-        \input{tables/ke_elastic}
-    \end{subfigure}
-\end{figure}
+\input{sections/calculations}
     
-
 % DISCUSSION
-
-\section*{Discussion of Results and Error Analysis}
+\input{sections/discussion}
 
 % CONCLUSION
+\input{sections/conclusion}
 
-\section*{Conclusion}
-
-
+%%
+% phew i think we're done
+%%
 
 \end{document}
