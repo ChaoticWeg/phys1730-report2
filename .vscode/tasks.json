@@ -4,7 +4,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "build.cmd",
+            "command": "pdflatex -halt-on-error report2.tex",
             "group":{
                 "kind": "build",
                 "isDefault": true
