@@ -5,7 +5,7 @@
             "label": "build",
             "type": "shell",
             "windows": {
-                "command": "pdflatex -halt-on-error report2.tex"
+                "command": "pdflatex -halt-on-error report2.tex && start /b C:\\Users\\wegbox\\AppData\\Local\\Apps\\Evince-3.6.1.0\\bin\\evince.exe report2.pdf"
             },
             "linux": {
                 "command": "pdflatex -halt-on-error report2.tex && evince report2.pdf"
